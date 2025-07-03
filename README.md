@@ -1,4 +1,4 @@
-Aplicación de Facturación - Progressive Web App (PWA)
+#Aplicación de Facturación - Progressive Web App (PWA)
 Objetivo
 Convertir la aplicación de facturación de productos existente en una Progressive Web App (PWA), permitiendo su instalación en dispositivos y mejorando su disponibilidad sin conexión (modo offline).
 
