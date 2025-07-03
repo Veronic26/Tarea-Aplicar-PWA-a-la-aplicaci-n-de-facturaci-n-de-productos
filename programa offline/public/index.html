@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gestión de Facturas</title>
+
+    <!-- Bootstrap local -->
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css" />
+    <!-- Archivo Manifest -->
+    <link rel="manifest" href="manifest.json" />
+
+    <style>
+      nav {
+        margin: 20px 0;
+      }
+      nav button {
+        margin: 0 10px;
+      }
+      main {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Grupo 1</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-modulo="clientes.html"
+                >Clientes</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-modulo="productos.html"
+                >Productos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-modulo="factura.html"
+                >Factura</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div id="vista"></div>
+    </main>
+
+    <script>
+      // registrar service worker
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("service-worker.js")
+            .then(function (registration) {
+              console.log("Service Worker registrado con éxito:", registration);
+            })
+            .catch(function (error) {
+              console.error("Error al registrar el Service Worker:", error);
+            });
+        });
+      } else {
+        console.warn("Service Workers no son soportados en este navegador.");
+      }
+    </script>
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

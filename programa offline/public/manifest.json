@@ -1,0 +1,16 @@
+{
+  "name": "Mi App de Facturacion de Productos",
+  "short_name": "Facturacion de Productos PWA",
+  "description": "Aplicacion PWA para la facturacion de Productos",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "images/factura.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
